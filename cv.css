@@ -14,12 +14,9 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-    transform: matrix3d(3);
-}
-ul {
-    list-style: none;
 }
 
+/* Container */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -33,28 +30,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo {
     font-size: 1.5rem;
-    font-weight: bold;
     font-weight: 900;
 }
 
 header .logo span {
     color: #f39c12;
-    font-weight: 900;
 }
 
 header nav ul {
     display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 900px;
+    margin-top: -20px;
 }
 
 header nav ul li {
     margin-left: 20px;
-    padding-left: 300px;
-    margin-left: 200px;
-   
 }
 
 header .btn {
@@ -66,12 +63,11 @@ header .btn {
 
 /* Hero Section */
 .hero {
-    background: url("https://via.placeholder.com/1500x600") no-repeat center center/cover;
+    background: url("codong.webp") no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 0;
 }
-
 .hero h1 {
     font-size: 2.5rem;
 }
@@ -89,7 +85,6 @@ header .btn {
     padding: 50px 0;
     text-align: center;
 }
-
 
 .about img {
     margin-top: 20px;
@@ -137,9 +132,57 @@ footer ul {
     gap: 15px;
     margin-top: 10px;
 }
-.container span{
-    color: #f39c12;
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .program-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
 }
-.container span h1{
-    
+
+@media only screen and (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .program-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
